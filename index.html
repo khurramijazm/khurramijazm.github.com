@@ -1,66 +1,78 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Khurramijazm.github.com : Welcome to Khurram Ijaz Opensource Repositories" />
 
-  <title>Khurramijazm.github.com</title>
-  <meta name="description" content="Welcome to Khurram Ijaz Opensource Repositories">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Khurramijazm.github.com</title>
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/khurramijazm">View on GitHub</a>
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Khurramijazm.github.com</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Welcome to Khurram Ijaz Opensource Repositories</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/khurramijazm" class="code">View Khurramijazm.github.com on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>Welcome to Khurram Ijaz's Open source tutorials</h3>
+          <h1 id="project_title">Khurramijazm.github.com</h1>
+          <h2 id="project_tagline">Welcome to Khurram Ijaz Opensource Repositories</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Welcome to Khurram Ijaz's Open source tutorials</h3>
 
 <p>You will find most up to date tutorials on Node.js , Websockets and Zend Framework2. </p>
+
+<h2><a href="http://khurramijazm.github.com/tutorial.rs.af.cm/">Node.js Basic Startup</a></h2>
+
+<blockquote>
+<p>You can expect well commented code i.e.
+<code>
+//Express Framework is built on top of node.js and Sencha Labs Connect Middle ware. 
+var express = require('express');
+// behind the scenes creates require('http').createServer()
+var app = express();
+// 1st Middleware used to log every request only when enviornment is development.
+app.use(express.logger('dev'));
+// gzip the response for happy fast browsers i.e Chrome, Safari, Firefox etc. 
+app.use(express.compress());
+// Time taken by the server to process the request.
+app.use(express.responseTime());
+// Serve static contents from the public directory
+app.use(express.static(__dirname + '/public'));
+// listen on port 3000 , I use free hosting from appfog on Rackspace Cloud infrastructure thats why the // port is 3000 in all the examples. 
+app.listen(3000)
+</code></p>
+
+<h2><a href="http://khurramijazm.github.com/nodejs/">Node.js with Backbone.js &amp; Underscore</a></h2>
+</blockquote>
+
+<h3>Zend Framework 2</h3>
+
+<h2><a href="http://github.com/khurramijazm/">Zf2 Modules Technology-Startup</a></h2>
 
 <h3>Authors and Contributors</h3>
 
 <p><a href="https://github.com/khurramijazm" class="user-mention">@khurramijazm</a></p>
-        </article>
-      </div>
+      </section>
     </div>
-    <footer>
-      <div class="owner">
 
-      <p><a href="https://github.com/khurramijazm" class="avatar"><img src="https://secure.gravatar.com/avatar/a2800ea4fd90eaa9b1be48126c60e59e?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a>View <a href="https://github.com/khurramijazm">khurramijazm</a> on <a href="https://www.github.com">GitHub</a></p>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/khurramijazm/khurramijazm.github.com/tarball/master" class="tar">tar</a><a href="https://github.com/khurramijazm/khurramijazm.github.com/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
+    
 
-  
-</body>
+  </body>
 </html>

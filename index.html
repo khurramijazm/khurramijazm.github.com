@@ -9,6 +9,15 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Khurramijazm.github.com</title>
+    <style type="text/css">
+pre {color: #000000; background-color: #ffffff; font-family: Monospaced}
+table {color: #000000; background-color: #e9e8e2; font-family: Monospaced}
+.LINE_COMMENT {color: #969696}
+.ST0 {color: #969696; background-color: #e9eff8}
+.ST1 {color: #009900}
+.STRING_LITERAL {color: #ce7b00}
+.keyword {color: #0000e6}
+</style>
   </head>
 
   <body>
@@ -34,23 +43,25 @@
 <h2><a href="http://khurramijazm.github.com/tutorial.rs.af.cm/">Node.js Basic Startup</a></h2>
 
 <blockquote>
-<p>You can expect well commented code i.e.
+<p>You can expect well commented code i.e.</p>
 <code>
-//Express Framework is built on top of node.js and Sencha Labs Connect Middle ware. 
-var express = require('express');
-// behind the scenes creates require('http').createServer()
-var app = express();
-// 1st Middleware used to log every request only when enviornment is development.
-app.use(express.logger('dev'));
-// gzip the response for happy fast browsers i.e Chrome, Safari, Firefox etc. 
-app.use(express.compress());
-// Time taken by the server to process the request.
-app.use(express.responseTime());
-// Serve static contents from the public directory
-app.use(express.static(__dirname + '/public'));
-// listen on port 3000 , I use free hosting from appfog on Rackspace Cloud infrastructure thats why the // port is 3000 in all the examples. 
-app.listen(3000)
-</code></p>
+  <pre>
+<span class="ST0">//</span><span class="ST0">Express</span> <span class="ST0">Framework</span> <span class="ST0">is</span> <span class="ST0">built</span> <span class="ST0">on</span> <span class="ST0">top</span> <span class="ST0">of</span> <span class="ST0">node</span><span class="ST0">.</span><span class="ST0">js</span> <span class="ST0">and</span> <span class="ST0">Sencha</span> <span class="ST0">Labs</span> <span class="ST0">Connect</span> <span class="ST0">Middle</span> <span class="ST0">ware</span><span class="ST0">.</span> 
+<span class="keyword">var</span> <span class="ST1">express</span> = require(<span class="STRING_LITERAL">&#39;</span><span class="STRING_LITERAL">express</span><span class="STRING_LITERAL">&#39;</span>);
+<span class="LINE_COMMENT">// </span><span class="LINE_COMMENT">behind</span> <span class="LINE_COMMENT">the</span> <span class="LINE_COMMENT">scenes</span> <span class="LINE_COMMENT">creates</span> <span class="LINE_COMMENT">require</span><span class="LINE_COMMENT">(&#39;</span><span class="LINE_COMMENT">http</span><span class="LINE_COMMENT">&#39;)</span><span class="LINE_COMMENT">.</span><span class="LINE_COMMENT">createServer</span><span class="LINE_COMMENT">()</span>
+<span class="keyword">var</span> <span class="ST1">app</span> = <span class="ST1">express</span>();
+<span class="LINE_COMMENT">// 1</span><span class="LINE_COMMENT">st</span> <span class="LINE_COMMENT">Middleware</span> <span class="LINE_COMMENT">used</span> <span class="LINE_COMMENT">to</span> <span class="LINE_COMMENT">log</span> <span class="LINE_COMMENT">every</span> <span class="LINE_COMMENT">request</span> <span class="LINE_COMMENT">only</span> <span class="LINE_COMMENT">when</span> <span class="LINE_COMMENT">enviornment</span> <span class="LINE_COMMENT">is</span> <span class="LINE_COMMENT">development</span><span class="LINE_COMMENT">.</span>
+<span class="ST1">app</span>.use(<span class="ST1">express</span>.logger(<span class="STRING_LITERAL">&#39;</span><span class="STRING_LITERAL">dev</span><span class="STRING_LITERAL">&#39;</span>));
+<span class="LINE_COMMENT">// </span><span class="LINE_COMMENT">gzip</span> <span class="LINE_COMMENT">the</span> <span class="LINE_COMMENT">response</span> <span class="LINE_COMMENT">for</span> <span class="LINE_COMMENT">happy</span> <span class="LINE_COMMENT">fast</span> <span class="LINE_COMMENT">browsers</span> <span class="LINE_COMMENT">i</span><span class="LINE_COMMENT">.</span><span class="LINE_COMMENT">e</span> <span class="LINE_COMMENT">Chrome</span><span class="LINE_COMMENT">, </span><span class="LINE_COMMENT">Safari</span><span class="LINE_COMMENT">, </span><span class="LINE_COMMENT">Firefox</span> <span class="LINE_COMMENT">etc</span><span class="LINE_COMMENT">.</span> 
+<span class="ST1">app</span>.use(<span class="ST1">express</span>.compress());
+<span class="LINE_COMMENT">// </span><span class="LINE_COMMENT">Time</span> <span class="LINE_COMMENT">taken</span> <span class="LINE_COMMENT">by</span> <span class="LINE_COMMENT">the</span> <span class="LINE_COMMENT">server</span> <span class="LINE_COMMENT">to</span> <span class="LINE_COMMENT">process</span> <span class="LINE_COMMENT">the</span> <span class="LINE_COMMENT">request</span><span class="LINE_COMMENT">.</span>
+<span class="ST1">app</span>.use(<span class="ST1">express</span>.responseTime());
+<span class="LINE_COMMENT">// </span><span class="LINE_COMMENT">Serve</span> <span class="LINE_COMMENT">static</span> <span class="LINE_COMMENT">contents</span> <span class="LINE_COMMENT">from</span> <span class="LINE_COMMENT">the</span> <span class="LINE_COMMENT">public</span> <span class="LINE_COMMENT">directory</span>
+<span class="ST1">app</span>.use(<span class="ST1">express</span>.<span class="keyword">static</span>(<span class="ST1">__dirname</span> + <span class="STRING_LITERAL">&#39;</span><span class="STRING_LITERAL">/public</span><span class="STRING_LITERAL">&#39;</span>));
+<span class="LINE_COMMENT">// </span><span class="LINE_COMMENT">listen</span> <span class="LINE_COMMENT">on</span> <span class="LINE_COMMENT">port</span><span class="LINE_COMMENT"> 3000 , </span><span class="LINE_COMMENT">I</span> <span class="LINE_COMMENT">use</span> <span class="LINE_COMMENT">free</span> <span class="LINE_COMMENT">hosting</span> <span class="LINE_COMMENT">from</span> <span class="LINE_COMMENT">appfog</span> <span class="LINE_COMMENT">on</span> <span class="LINE_COMMENT">Rackspace</span> <span class="LINE_COMMENT">Cloud</span> <span class="LINE_COMMENT">infrastructure</span> <span class="LINE_COMMENT">thats</span> <span class="LINE_COMMENT">why</span> <span class="LINE_COMMENT">the</span><span class="LINE_COMMENT"> // </span><span class="LINE_COMMENT">port</span> <span class="LINE_COMMENT">is</span><span class="LINE_COMMENT"> 3000 </span><span class="LINE_COMMENT">in</span> <span class="LINE_COMMENT">all</span> <span class="LINE_COMMENT">the</span> <span class="LINE_COMMENT">examples</span><span class="LINE_COMMENT">.</span> 
+<span class="ST1">app</span>.listen(3000)
+</pre>
+</code>
 
 <h2><a href="http://khurramijazm.github.com/nodejs/">Node.js with Backbone.js &amp; Underscore</a></h2>
 </blockquote>
